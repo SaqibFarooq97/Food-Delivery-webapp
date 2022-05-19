@@ -1,0 +1,81 @@
+{% extends 'main.html' %}
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--  <title>Profile</title>-->
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+<!--  <link rel="stylesheet" type="text/css" href="">-->
+<!--  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <style>-->
+<!--        #row{-->
+<!--            font-variant-caps: small-caps;-->
+<!--    background-color: aliceblue;-->
+
+<!--    text-align: center;-->
+<!--        background-color: burlywood;-->
+<!--    border-radius: 26px;-->
+
+<!--        }-->
+<!--        #cards{-->
+
+<!--    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);-->
+<!--    width: 18rem;-->
+<!--    background-color: cadetblue;-->
+<!--}-->
+
+<!--    </style>-->
+
+<!--</head>-->
+<!--<body>-->
+<!--  <div class="container"  style="    background-color: brown;">-->
+
+<!--       <div style="text-align: center;"  >-->
+<!--         <h1> List Of Users</h1>-->
+<!--       </div>-->
+
+<!--    <div class="row"  id="row">-->
+<!--        {%for result in res %}-->
+<!--     <div class="col-sm-4">-->
+
+<!--        <div class="card" style="width: 18rem;" id="cards">-->
+
+<!--  <img class="card-img-top" src="{{result.picture.large}}" alt="Card image cap">-->
+
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">{{result.name.first}}</h5>-->
+<!--      <p class="card-text">Age : {{result.dob.age}}</p>-->
+<!--      <p>Ph no:{{result.cell}}</p>-->
+
+
+<!--  </div>-->
+<!--  </div>-->
+<!--     </div>-->
+<!--       {%  endfor %}-->
+
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+{% block content %}
+
+<form action="{% url 'login' %}" method="POST">
+          {% csrf_token %}
+        <label>Enter Your User Name</label><br>
+        <input type="text" name="username" placeholder="Enter your username" id="username"><br>
+        <label>Password</label><br>
+        <input type="text" placeholder="Password" id="password" name="password"><br>
+        <label></label>
+        <input type="submit">
+
+
+      </form>
+
+{% endblock %}

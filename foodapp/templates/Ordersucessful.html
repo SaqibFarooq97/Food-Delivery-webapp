@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+
+
+<html>
+<head>
+    <title>Cart</title>
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+   <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+  
+    
+   
+	<link rel="stylesheet" type="text/css" href="">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+	  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+   
+    
+		#main_tag{
+			color: rgb();
+			
+			    font-size: 45px;
+             font-family: cursive;
+              color: darkred;
+    }
+    html,body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#header-img{
+    position: relative;
+    width:100vw;
+    height:341px;
+    background-image:linear-gradient(to right,rgba(0,0,0,0.4),rgba(0,0,0,0.6)), url('{% static 'main_pic.png' %}');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+		#imgs{
+			 width: 81%;
+    height: 15vw;
+    object-fit: cover;
+		}
+		#partner{
+			text-align: center;
+      background-color: aliceblue;
+      
+      
+    padding-left: 228px;
+    margin-bottom: 12px;
+    margin-top: 10px;
+		}
+		
+		#cardbox{
+		background-color: burlywood;
+  }
+  header{
+    width:100vw;
+    height:60px;
+}
+.nav-menu{
+    width:80vw;
+    height:60px;
+}
+.foodApp{
+    display: block;
+    font-weight: bolder;
+    color:red;
+    text-align: center;
+    font-size: 68px;
+    margin:0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.header-flex{
+    margin-top: 100px;
+}
+.nav-link{
+    border-bottom: 0px solid black;
+    transition: border-bottom 0.3s;
+    cursor: pointer;
+}
+.nav-link:hover{
+    border-bottom: 5px solid white;
+}
+
+
+/* checkout */
+.checkout ul{
+    border: 2px solid #ebebeb;
+    background: #f3f3f3;
+    padding-left:25px;
+    padding-right:25px;
+    padding-top:16px;
+    padding-bottom: 20px;
+}
+.checkout ul li{
+    list-style: none;
+    font-size:16px;
+    font-weight: bold;
+    color:#252525;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+.checkout ul li.subtotal{
+    font-weight: bold;
+    text-transform: capitalize;
+    border-bottom:1px solid #fff;
+    padding-bottom: 14px;
+}
+.checkout ul li.subtotal span{
+    font-weight: bold;
+}
+.checkout ul li.cart-total{
+    padding-top: 10px
+}
+.checkout ul li.cart-total span{
+    color:#e7ab3c;
+}
+.checkout ul li span{
+    float:right;
+}
+.checkout .proceed-btn{
+    font-size:15px;
+    font-weight: bold;
+    color:#fff;
+    background:#252525;
+    text-transform: uppercase;
+    padding:15px 25px 14px 25px;
+    display: block;
+    text-align: center;
+}
+
+/* end checkout */
+.footer{
+background: #152E33;
+color:white;
+}
+
+.links{
+ul {list-style-type: none;}
+li a{
+color: white;
+transition: color .2s;
+}
+&:hover{
+text-decoration:none;
+color:#4180CB;
+}
+
+
+.about-company{
+i {
+font-size: 25px;
+}
+a{
+color:white;
+transition: color .2s;
+&:hover{color:#4180CB}
+}
+} 
+.location{
+i{font-size: 18px;}
+}
+.copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <div id="header-img">
+      <header>
+     
+          <div class="d-flex justify-content-center">
+              <div class="nav-menu">
+                 <a href="{% url 'logout' %}">  <p class="float-right text-white m-0 mt-3 h4 nav-link">Logout </p></a>
+          
+          <a href="{% url 'myOrders' %}">  <p class="float-right text-white m-0 mt-3 h4 nav-link">My Orders </p></a>
+              <a href="{% url 'cart' %}">  <p class="float-right text-white m-0 mt-3 h4 nav-link">My Cart </p></a>
+               <p class="float-right mr-4 text-white m-0 mt-3 h4 nav-link">Welcome {{user.username}}</p>
+         
+                     </div>
+          </div>
+      </header>
+ 
+      <div class="container">
+          <div class="d-flex justify-content-center header-flex">
+            <a href="{% url 'main_view' %}">  <p class="foodApp">FoodiZone</p> </a>      
+      </div>
+  </div>
+    </div>
+
+ <div class="container">
+
+    
+    <div class="alert alert-success" role="alert">
+      <h4>Your Order Has been Approved</h4>
+    </div>
+    
+    </div>
+                    
+                        
+   
+
+ 
+ 
+ <div class="mt-5 pt-5 pb-5 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-xs-12 about-company">
+          <h2>About Us</h2>
+          <p class="pr-5 text-white-50">FoodiZone is a platform based on a hyperlocal on-demand food delivery business operation. Working as a bridge between vendors and customers, The app allows foodies to order food from nearby restaurants and get it delivered at their doorstep.</p>
+                  </div>
+        <div class="col-lg-3 col-xs-12 links">
+          <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+            <ul class="m-0 p-0">
+              <li>- <a href="registrations.html">Become a Partner</a></li>
+              <li>- <a href="#">Contact Us</a></li>
+             
+            </ul>
+        </div>
+        <div class="col-lg-4 col-xs-12 location">
+          <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+          <p>Habba Kadal Srinagar </p>
+          <p class="mb-0"><i class="fa fa-phone mr-3"></i>(+91) 7006921467</p>
+          <p><i class="fa fa-envelope-o mr-3"></i>foodizone@gmail.com</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col copyright">
+          <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+
+
+    {% endblock %}
+
+    <!-- Button trigger modal -->
+   <!-- Button trigger modal -->
+                 <a href=""><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">  Add to Cart</button></a>
+                  
+                   
+</body>
+
+</html>

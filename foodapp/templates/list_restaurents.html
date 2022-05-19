@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+{% if alls %}
+{% endif %}
+<html>
+<head>
+	<title>List of restaurents</title>
+	<link rel="stylesheet" type="text/css" href="">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+	  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+   
+    
+		#main_tag{
+			color: rgb();
+			
+			    font-size: 45px;
+             font-family: cursive;
+              color: darkred;
+    }
+    html,body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#header-img{
+    position: relative;
+    width:100vw;
+    height:341px;
+    background-image:linear-gradient(to right,rgba(0,0,0,0.4),rgba(0,0,0,0.6)), url('{% static 'main_pic.png' %}');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+		#imgs{
+			 width: 81%;
+    height: 15vw;
+    object-fit: cover;
+		}
+		#partner{
+			text-align: center;
+      background-color: aliceblue;
+      
+      
+    padding-left: 228px;
+    margin-bottom: 12px;
+    margin-top: 10px;
+		}
+		
+		#cardbox{
+		background-color: burlywood;
+  }
+  header{
+    width:100vw;
+    height:60px;
+}
+.nav-menu{
+    width:96vw;
+    height:60px;
+}
+.foodApp{
+    display: block;
+    font-weight: bolder;
+    color:red;
+    text-align: center;
+    font-size: 68px;
+    margin:0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.header-flex{
+    margin-top: 100px;
+}
+.nav-link{
+    border-bottom: 0px solid black;
+    transition: border-bottom 0.3s;
+    cursor: pointer;
+}
+.nav-link:hover{
+    border-bottom: 5px solid white;
+}
+.footer{
+background: #152E33;
+color:white;
+}
+
+.links{
+ul {list-style-type: none;}
+li a{
+color: white;
+transition: color .2s;
+}
+&:hover{
+text-decoration:none;
+color:#4180CB;
+}
+
+
+.about-company{
+i {
+font-size: 25px;
+}
+a{
+color:white;
+transition: color .2s;
+&:hover{color:#4180CB}
+}
+} 
+.location{
+i{font-size: 18px;}
+}
+.copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+}
+
+
+
+    </style>
+</head>
+<body>
+  
+
+
+  
+
+    <div id="header-img">
+      <header>
+     
+          <div class="d-flex justify-content-center">
+              <div class="nav-menu">
+                {% if valid_user %} 
+                <a href="{% url 'logout' %}">  <p class="float-right text-white m-0 mt-3 h4 nav-link">Logout </p></a>
+          
+                <a href="{% url 'myOrders' %}">  <p class="float-right text-white m-0 mt-3 h4 nav-link">My Orders </p></a>
+                    <a href="{% url 'cart' %}">  <p class="float-right text-white m-0 mt-3 h4 nav-link">My Cart </p></a>
+                
+                    <p class="float-right mr-4 text-white m-0 mt-3 h4 nav-link">Welcome {{valid_user.username}}</p>
+
+                    
+                    {% else %}
+                    <a href="{% url 'newsignup' %}">  <p class="float-right text-white m-0 mt-3 h4 nav-link">Sign up</p></a>
+                      <a href="{% url 'login' %}">  <p class="float-right mr-4 text-white m-0 mt-3 h4 nav-link">Login</p></a>
+                
+                     {% endif %}
+              </div>
+            
+          </div>
+      </header>
+ 
+      <div class="container">
+          <div class="d-flex justify-content-center header-flex">
+            <a href="{% url 'main_view' %}"> <h1 class="font-weight-bold py-3 foodApp">FoodiZone</h1></a>
+          </div>
+         
+      </div>
+  </div>
+  <div class="container">
+<div class="row" id="partner">
+	<h2 id="partner">Our Partners</h2>
+	
+
+</div>
+			
+  </div>
+ 
+  
+  <div class="container">
+	   <div class="row">
+      {% if alls %}
+      {% for owner in alls %}
+     
+	    	<div class="col-sm-3">
+          <div class="cardbox" style="width: 18rem;">
+           
+             
+             
+              <img src=" {{ owner.restaurentimage.url }} " id="imgs" class="card-img-top" alt="...">
+                   <div class="card-body">
+                       <h5 class="card-title">{{owner.restaurentname}}</h5>
+                            <p class="card-text">{{owner.restaurentspeaciality}}</p>
+                            
+
+                            {% if valid_user %}
+                            
+
+                             <a href="{% url 'order' owner.id %}" class="btn btn-primary">{{owner.restaurentname}}</a>
+
+                            {% else %}
+                            <a href="{% url 'newsignup' %}" class="btn btn-primary">Order</a>
+
+                            {% endif %}
+                    </div> 
+            </div>
+        </div>
+        {% endfor %}
+                            {% endif %}
+
+       
+
+		</div>
+		
+
+  </div>
+</div>
+
+
+
+
+	</div>
+
+
+
+		
+
+	</div>
+  <div class="mt-5 pt-5 pb-5 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-xs-12 about-company">
+          <h2>About Us</h2>
+          <p class="pr-5 text-white-50">FoodiZone is a platform based on a hyperlocal on-demand food delivery business operation. Working as a bridge between vendors and customers, The app allows foodies to order food from nearby restaurants and get it delivered at their doorstep.</p>
+                  </div>
+        <div class="col-lg-3 col-xs-12 links">
+          <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+            <ul class="m-0 p-0">
+              <li>- <a href="registrations.html">Become a Partner</a></li>
+              <li>- <a href="#">Contact Us</a></li>
+             
+            </ul>
+        </div>
+        <div class="col-lg-4 col-xs-12 location">
+          <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+          <p>Habba Kadal Srinagar </p>
+          <p class="mb-0"><i class="fa fa-phone mr-3"></i>(+91) 7006921467</p>
+          <p><i class="fa fa-envelope-o mr-3"></i>foodizone@gmail.com</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col copyright">
+          <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
+{% endblock %}

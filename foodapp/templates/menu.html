@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>RESTAURENTS</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+  body {
+      position: relative;
+  }
+  .affix {
+      top: 20px;
+  }
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+        margin-left: 150px;
+    }
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+  var myModal = new bootstrap.Modal(document.getElementById('CartAddModal'))
+</script>
+<style>
+  #imgs{
+			 width: 81%;
+    height: 15vw;
+    object-fit: cover;
+		}
+.first_row{
+  background-color:cadetblue;
+}
+.styles{     border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    padding-left: 40px;
+    
+    padding-bottom: 7px;
+    padding-top: 13px;;
+}
+.label_heading{
+  background-color: rgb(141, 33, 33);
+    margin-top: 15px;
+    color: cornsilk;
+    font-family: cursive;
+}
+header{
+    width:100vw;
+    height:60px;
+}
+.nav-menu{
+    width:60vw;
+    height:60px;
+}
+.foodApp{
+    display: block;
+    font-weight: bolder;
+    color:red;
+    text-align: center;
+    font-size: 68px;
+    margin:0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.header-flex{
+    margin-top: 100px;
+}
+.nav-link{
+    border-bottom: 0px solid black;
+    transition: border-bottom 0.3s;
+    cursor: pointer;
+}
+html,body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#header-img{
+    position: relative;
+    width:100vw;
+    height:341px;
+    background-image:linear-gradient(to right,rgba(0,0,0,0.4),rgba(0,0,0,0.6)), url('main_pic.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#font_style{
+  text-align: center;
+    color: brown;
+    font-weight: bolder
+}
+#dew_style{
+  background-color: bisque;
+    padding: 14px;
+}
+/* footercss */
+.footer{
+background: #152E33;
+color:white;
+}
+
+.links{
+ul {list-style-type: none;}
+li a{
+color: white;
+transition: color .2s;
+}
+&:hover{
+text-decoration:none;
+color:#4180CB;
+}
+
+
+.about-company{
+i {
+font-size: 25px;
+}
+a{
+color:white;
+transition: color .2s;
+&:hover{color:#4180CB}
+}
+} 
+.location{
+i{font-size: 18px;}
+}
+.copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+}
+
+</style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+ 
+  <div id="header-img">
+       <header>
+           <div class="container">
+              <div class="d-flex justify-content-center header-flex">
+                <a href="index.html"> <p class="foodApp">FoodiZone</p></a>
+                 </div>
+               </div>  
+         </header>
+  </div>  
+            <div id="dew_style">
+                 <h2 id="font_style">Welcome To Samci Restaurent </h2>
+
+               </div>
+
+    <br>
+
+   <div class="container">
+      <div class="row">
+            <nav class="col-sm-3" id="myScrollspy">
+                 <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+                     <li><a href="#section1">Pizza</a></li>
+                     <li><a href="#section2">Rolls and French fries</a></li>
+                     <li><a href="#section3">Kebab kanti</a></li>
+                     <li><a href="#section4">Wazwan</a></li>
+                     <li><a href="#section5">Momos</a></li>
+                     <li><a href="#section6">Chicken</a></li>
+            
+                  </ul>
+              </nav>
+      
+    
+          <div class="col-sm-9">
+               <div  class="styles label_heading" id="section1" >
+                  <h1>Pizza</h1>
+             
+                 </div>
+                 
+           <div class="container">
+             <div class="row">
+               <div class="col-sm-3">
+                 <div class="cardbox" style="width: 18rem;">
+                     <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <h5 class="card-title">Big Chef</h5>
+                                   <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                           </div>
+                   </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="cardbox" style="width: 18rem;">
+                    <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                         <div class="card-body">
+                             <h5 class="card-title">Big Chef</h5>
+                                  <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                                     <a href="#" class="btn btn-primary">Add to Cart</a>
+                          </div>
+                  </div>
+             </div>
+
+
+             <div class="col-sm-3">
+                  <div class="cardbox" style="width: 18rem;">
+                        <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                           <div class="card-body">
+                              <h5 class="card-title">Big Chef</h5>
+                                <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                                   <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                    </div>
+                </div>
+      </div>
+       
+
+
+
+      <div class="col-sm-9">
+        <div  class="styles label_heading" id="section2" >
+           <h1>Rolls and French Fries</h1>
+      
+          </div>
+          
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="cardbox" style="width: 18rem;">
+              <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                   <div class="card-body">
+                       <h5 class="card-title">Big Chef</h5>
+                            <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                               <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+            </div>
+       </div>
+
+       <div class="col-sm-3">
+         <div class="cardbox" style="width: 18rem;">
+             <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Big Chef</h5>
+                           <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                              <a href="#" class="btn btn-primary">Add to Cart</a>
+                   </div>
+           </div>
+      </div>
+
+
+      <div class="col-sm-3">
+           <div class="cardbox" style="width: 18rem;">
+                 <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                    <div class="card-body">
+                       <h5 class="card-title">Big Chef</h5>
+                         <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                     </div>
+             </div>
+         </div>
+</div>
+
+
+
+
+<div class="col-sm-9">
+  <div  class="styles label_heading" id="section3" >
+     <h1>Kebab Kanti</h1>
+
+    </div>
+    
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="cardbox" style="width: 18rem;">
+        <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+             <div class="card-body">
+                 <h5 class="card-title">Big Chef</h5>
+                      <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                         <a href="#" class="btn btn-primary">Add to Cart</a>
+              </div>
+      </div>
+ </div>
+
+ <div class="col-sm-3">
+   <div class="cardbox" style="width: 18rem;">
+       <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Big Chef</h5>
+                     <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+             </div>
+     </div>
+</div>
+
+
+<div class="col-sm-3">
+     <div class="cardbox" style="width: 18rem;">
+           <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+              <div class="card-body">
+                 <h5 class="card-title">Big Chef</h5>
+                   <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+               </div>
+       </div>
+   </div>
+</div>
+
+
+
+
+       
+        <div  class="styles label_heading" id="section4" >
+          <h1>Wazwan</h1>
+
+        </div>
+      
+        <div class="row">
+        <div class="col-sm-3">
+        <div class="cardbox" style="width: 18rem;">
+            <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Big Chef</h5>
+                          <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                              <a href="#" class="btn btn-primary">Add to Cart</a>
+                  </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+        <div class="cardbox" style="width: 18rem;">
+            <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Big Chef</h5>
+                          <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                  </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-3">
+          <div class="cardbox" style="width: 18rem;">
+                <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Big Chef</h5>
+                        <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                          <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+            </div>
+        </div>
+        </div>
+        
+        <div  class="styles label_heading" id="section5" >
+          <h1>MOMO</h1>
+
+        </div>
+        
+        <div class="row">
+        <div class="col-sm-3">
+        <div class="cardbox" style="width: 18rem;">
+            <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Big Chef</h5>
+                          <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                              <a href="#" class="btn btn-primary">Add to Cart</a>
+                  </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+        <div class="cardbox" style="width: 18rem;">
+            <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Big Chef</h5>
+                          <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                  </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-3">
+          <div class="cardbox" style="width: 18rem;">
+                <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Big Chef</h5>
+                        <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                          <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+            </div>
+        </div>
+        </div>
+         
+        <div  class="styles label_heading" id="section6" >
+          <h1>Chicken</h1>
+
+        </div>
+        
+        <div class="row">
+        <div class="col-sm-3">
+        <div class="cardbox" style="width: 18rem;">
+            <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Big Chef</h5>
+                          <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                              <a href="#" class="btn btn-primary">Add to Cart</a>
+                  </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+        <div class="cardbox" style="width: 18rem;">
+            <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Big Chef</h5>
+                          <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                  </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-3">
+          <div class="cardbox" style="width: 18rem;">
+                <img src="bigchef.jpg" id="imgs" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Big Chef</h5>
+                        <p class="card-text">Burger,Momo,Pizza, Tandori Chicken</p>
+                          <!-- <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                          <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+  Add to Cart
+</button>  -->
+
+
+                    </div>
+            </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+    </div>
+    </div>
+    </div>
+    <
+    
+    
+    <br>
+
+
+        
+
+        
+ <div class="mt-5 pt-5 pb-5 footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-xs-12 about-company">
+        <h2>About Us</h2>
+        <p class="pr-5 text-white-50">FoodiZone is a platform based on a hyperlocal on-demand food delivery business operation. Working as a bridge between vendors and customers, The app allows foodies to order food from nearby restaurants and get it delivered at their doorstep.</p>
+                </div>
+      <div class="col-lg-3 col-xs-12 links">
+        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+          <ul class="m-0 p-0">
+            <li>- <a href="#">Become a Partner</a></li>
+            <li>- <a href="#">Contact Us</a></li>
+           
+          </ul>
+      </div>
+      <div class="col-lg-4 col-xs-12 location">
+        <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+        <p>Habba Kadal Srinagar </p>
+        <p class="mb-0"><i class="fa fa-phone mr-3"></i>(+91) 7006921467</p>
+        <p><i class="fa fa-envelope-o mr-3"></i>foodizone@gmail.com</p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col copyright">
+        <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+               </div>
+             </div>
+          </div>
+     </div>
+
+ 
+
+  
+
+
+ 
+
+
+</body>
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="staticBackdrop"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add Item to cart</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+         Quantity: <input type="number" name="number">
+
+    </form>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+</html>

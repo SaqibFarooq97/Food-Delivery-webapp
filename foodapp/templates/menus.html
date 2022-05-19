@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" type="text/css" href="">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+
+  
+  <style>
+
+    
+    /* body {
+      position: relative;
+    } */
+
+    .affix {
+      top: 10px;
+      z-index: 1;
+      position: fixed;
+
+    }
+
+    @media screen and (max-width: 810px) {
+
+     
+      
+      
+      #section1,
+      #section2,
+      #section3,
+      #section41,
+      #section42 {
+        margin-left: 150px;
+      }
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    var myModal = new bootstrap.Modal(document.getElementById('CartAddModal'))
+  </script>
+  <style>
+    #imgs {
+      width: 81%;
+      height: 15vw;
+      object-fit: cover;
+    }
+
+    .first_row {
+      background-color: cadetblue;
+    }
+
+    .styles {
+      border-radius: 8px;
+      font-size: 13px;
+      margin-bottom: 15px;
+      padding-left: 40px;
+
+      padding-bottom: 7px;
+      padding-top: 13px;
+      ;
+    }
+
+    .label_heading {
+      background-color: rgb(141, 33, 33);
+      margin-top: 15px;
+      color: cornsilk;
+      font-family: cursive;
+    }
+
+    header {
+      width: 100vw;
+      height: 60px;
+    }
+
+    .nav-menu {
+      width: 60vw;
+      height: 60px;
+    }
+
+    .foodApp {
+      display: block;
+      font-weight: bolder;
+      color: red;
+      text-align: center;
+      font-size: 68px;
+      margin: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .header-flex {
+      margin-top: 100px;
+    }
+
+    .nav-link {
+      border-bottom: 0px solid black;
+      transition: border-bottom 0.3s;
+      cursor: pointer;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    #header-img {
+      position: relative;
+      width: 100vw;
+      height: 341px;
+      background-image:linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+      url('{% static 'main_pic.png' %}');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #font_style {
+      text-align: center;
+      color: brown;
+      font-weight: bolder
+    }
+
+    #dew_style {
+      background-color: bisque;
+      padding: 14px;
+    }
+
+    /* footercss */
+    .footer {
+      background: #152E33;
+      color: white;
+    }
+
+    .links {
+      ul {
+        list-style-type: none;
+      }
+
+      li a {
+        color: white;
+        transition: color .2s;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: #4180CB;
+      }
+
+
+      .about-company {
+        i {
+          font-size: 25px;
+        }
+
+        a {
+          color: white;
+          transition: color .2s;
+
+          &:hover {
+            color: #4180CB
+          }
+        }
+      }
+
+      .location {
+        i {
+          font-size: 18px;
+        }
+      }
+
+      .copyright p {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+      }
+    }
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+  <div id="header-img">
+    <header>
+       {% if user %} 
+       
+      <div class="d-flex justify-content-center">
+        <div class="nav-menu">
+          <a href="{% url 'logout' %}">  <p class="float-right text-white m-0 mt-3 h4 nav-link">Logout </p></a>
+          
+          <a href="{% url 'myOrders' %}">  <p class="float-right text-white m-0 mt-3 h4 nav-link">My Orders </p></a>
+              <a href="{% url 'cart' %}">  <p class="float-right text-white m-0 mt-3 h4 nav-link">My Cart </p></a>
+               <p class="float-right mr-4 text-white m-0 mt-3 h4 nav-link">Welcome {{user.username}}</p>
+               
+        </div>
+    </div>
+  </header>
+  {% endif %}
+
+      
+      <div class="container">
+        <div class="d-flex justify-content-center header-flex">
+          <a href="{% url 'main_view' %}">
+            <p class="foodApp">FoodiZone</p>
+          </a>
+        </div>
+      </div>
+  
+  </div>
+  {% if restaurent %}
+  <div id="dew_style">
+    <h2 id="font_style">Welcome To {{restaurent.restaurentname}} </h2>
+    {% endif %}
+  </div>
+
+  {% if flag == True %}
+  <div class="alert alert-primary" role="alert">
+    You are having orders from another restaurent in cart already. Adding items from this restaurant 
+    will override them.
+  </div>
+
+  {% endif %}
+
+  <br>
+  {% if all %}
+  {% if empty %}
+   <h6>You can select only one restaurent</h6>    
+  {%  endif %}
+
+  <div class="container">
+
+    <div class="row">
+
+
+      
+
+      <nav class="col-sm-3" id="myScrollspy">
+        {% for key, values in all.items %}
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="500">
+          <li><a href="#{{key.split|join:'-'}}">{{key}}</a> </li> 
+
+        </ul>
+        {% endfor %}
+      </nav>
+      
+    
+
+      
+
+      <div class="col-sm-9">
+        {% for key,values in all.items %}
+        <div class="styles label_heading" id="{{key.split|join:'-'}}">
+          <h1>{{key}}</h1>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            {% for value in values %}
+            <div class="col-sm-3">
+              <div class="cardbox" style="width: 18rem;">
+              
+                <img src="{{ value.item_image.url }}" id="imgs" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <form action="{% url 'add_to_cart' %}" method="POST">    
+                    {% csrf_token %}     
+                  <h4  class="card-title"><b>{{value.food_name}}</b></h4>
+                  <p class="card-text"><i>{{value.item_ingredents}}</i></p>
+                  <p class="card-text">Price:<strong>{{value.item_price}}</strong></p>
+                  <p><input type="number" name="quantity" id="quantity" placeholder="Enter Quantity" value=1>
+                     <input type="hidden" name="item_id" id="item_id" value="{{ value.id }}"></p>
+                   <input type="submit" value="Add to cart" class="btn btn-primary">
+                   <!-- <a href="" class="btn btn-primary">Add to Cart</a> -->
+                  <!-- Button trigger modal -->
+                 <!-- <a href=""><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop"></a> -->
+                    <!-- Add to Cart -->
+                  <!-- </button> -->
+                </form>
+
+                </div>
+
+              </div>
+
+            </div>
+            {% endfor %}
+          </div><!-- col-sm-6    -->
+        </div><!-- main_row    -->
+        {% endfor %}
+      </div><!-- main_container    -->
+    </div>
+  </div>
+
+
+
+  <br>
+
+  <div class="mt-5 pt-5 pb-5 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-xs-12 about-company">
+          <h2>About Us</h2>
+          <p class="pr-5 text-white-50">FoodiZone is a platform based on a hyperlocal on-demand food delivery business
+            operation. Working as a bridge between vendors and customers, The app allows foodies to order food from
+            nearby restaurants and get it delivered at their doorstep.</p>
+        </div>
+        <div class="col-lg-3 col-xs-12 links">
+          <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+          <ul class="m-0 p-0">
+            <li>- <a href="#">Become a Partner</a></li>
+            <li>- <a href="#">Contact Us</a></li>
+
+          </ul>
+        </div>
+        <div class="col-lg-4 col-xs-12 location">
+          <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+          <p>Habba Kadal Srinagar </p>
+          <p class="mb-0"><i class="fa fa-phone mr-3"></i>(+91) 7006921467</p>
+          <p><i class="fa fa-envelope-o mr-3"></i>foodizone@gmail.com</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col copyright">
+          <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endif %}
+
+  {% endblock %}
+
+</body>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add Item to cart</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          Quantity: <input type="number" name="number">
+
+        </form>
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</html>

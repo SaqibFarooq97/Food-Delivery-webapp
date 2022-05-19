@@ -1,0 +1,67 @@
+{% load static %}
+
+
+
+<html>
+<head>
+    Food App
+</head>
+<body>
+<h2> Welcome to Food App</h2>
+{% block content %}
+
+    {% if user %}
+        <h3> Welcome {{user.username}}</h3>
+    {% else %}
+        <h3> Invalid credentials </h3>
+
+    {% endif %}
+
+    <!-- <ul>
+        {% for student in std %}
+            <li> <a href="{% url 'student_details' student.registration_no %}">{{student.name}}</a> </li>
+
+        {% endfor %}
+    </ul> -->
+
+
+    {% if foods % }
+    <ul>
+        {% for food in foods %}
+            <li> <a href="{% url 'food_descriptions' food_items.food_name %}">{{food.food_name}}</a> </li>
+
+        {% endfor %}
+    </ul>
+    
+   
+    {% if std %}
+    {% for student in std %}
+        Created Student: {{student.name}} with regno {{student.registration_no}} for course {{student.course.code}}<br>
+    {% endfor %}
+    {% endif %}
+<h4>mca students are {{student}}</h4>
+
+<h1>
+      {% if is_user %}
+         {% for u in is_user %}
+                user with name {{ u.username }}
+         {% endfor %}
+</h1>
+
+       {% endif %}
+   
+<h5>
+
+    {% if food %}
+    {% for u in food %}
+    food with name {{ u }}
+    {% endfor %}
+
+       {% endif %}
+   
+</h5>
+
+
+{% endblock %}
+</body>
+</html>

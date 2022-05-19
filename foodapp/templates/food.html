@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <title>
+
+    </title>
+    <body>
+        {% block content %}
+        
+        <h4>list of food items</h4>
+        <ul>
+            {% for food in foods %}
+                <li> <a href="{% url 'food_descriptions' food.food_name %}">{{food.food_name}}</a> </li>
+    
+            {% endfor %}
+        </ul>
+
+        {% endblock %}
+    </body>
+</html>

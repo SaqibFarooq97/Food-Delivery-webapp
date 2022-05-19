@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+	  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style type="text/css">
+#main_tag{
+			color: rgb();
+
+			    font-size: 45px;
+             font-family: cursive;
+              color: darkred;
+		}
+  #container{
+
+
+    text-align: center;
+    padding: 88px;
+        font-variant: petite-caps;
+    font-size: large;
+  }
+  label{
+    padding: 10px;
+  }
+  #main_dew{
+      background: url('/static/pic.jpg');
+      height: 300px;
+    }
+
+
+
+</style>
+</head>
+{% block content %}
+<body style="background-color: aliceblue;
+" >
+	<div class="container" id="container">
+
+ <div id="main_dew" background="{% static 'pic.jpg' %}">
+  <p ><center id="main_tag" >  Online Food Delivery</center></p>
+</div>
+
+      <h1>Login</h1>
+     <form action="{% url 'login' %}" method="POST">
+          {% csrf_token %}
+        <label>Enter Your User Name</label><br>
+        <input type="text" name="username" placeholder="Enter your username" id="username"><br>
+        <label>Password</label><br>
+        <input type="text" placeholder="Password" id="password" name="password"><br>
+        <label></label>
+        <input type="submit">
+
+
+      </form>
+
+
+
+	</div>
+
+</body>
+</html>
+
+{% endblock %}

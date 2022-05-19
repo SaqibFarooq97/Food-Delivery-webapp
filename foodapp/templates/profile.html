@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+	  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+    	#first_row{
+    		background-color: green;
+    	}
+
+
+    </style>
+</head>
+<body>
+
+		<div class="row" id="first_row">
+			<div class="col-sm-6">
+			  profile pic<img src="{{picture.large}}">
+		</div>
+			<div class="col-sm-6">
+				<h4>Title: {{name.title}} </h4><br>
+				<h4>First Name:{{name.first}}</h4><br>
+				<h4>Second Name:{{name.last}}</h4><br>
+
+
+				<h4>D.O.B:{{dob.age}}</h4><br>
+				<h4>email:{{email}}</h4><br>
+
+
+			</div>
+
+
+		</div>
+		<div class="row" >
+			<h4>Adress:{{location.city}}</h4><br>
+			<h4>Pin Code:{{location.postcode}}</h4><br>
+			<h4>State: {{location.state}}</h4><br>
+			<h4>country:{{location.country}}<br>
+				<h4>Street name:{{location.street.name}}</h4><br>
+				<h4>Street no.:{{location.street.number}}</h4><br>
+
+
+		</div>
+		<div class="row">
+			<h4>Ph no:{{cell}}</h4>
+
+
+
+
+
+		</div>
+
+
+
+
+	</div>
+
+</body>
+</html>

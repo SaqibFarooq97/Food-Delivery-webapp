@@ -1,0 +1,21 @@
+<div class="container">
+    <!-- <h2>Orders</h2> -->
+    {% if orders  %}
+{% for item in orders %}
+    <!-- <p>Image at the top (card-img-top):</p> -->
+    <div class="card" style="width:400px">
+      <!-- <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%"> -->
+      <div class="card-body">
+
+        {% for values in item.items_all.all %}
+        <!-- <h2>{{items}}</h2> -->
+       
+       <h4 class="card-title">{{values.item.food_name}}</h4>
+        {% endfor %}
+        <label for=""><h4>Total</h4></label><p class="card-text">{{item.grand_total}}</p>
+        <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
